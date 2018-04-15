@@ -1,0 +1,1 @@
+解决gcr.io/google_containers/镜像无法下载的问题，实现曲线救国。
