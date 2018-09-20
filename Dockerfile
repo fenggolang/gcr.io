@@ -3,4 +3,5 @@
 #FROM gcr.io/google_containers/k8s-dns-kube-dns-amd64:1.14.7
 #FROM gcr.io/google_containers/k8s-dns-dnsmasq-nanny-amd64:1.14.7
 #FROM gcr.io/google_containers/k8s-dns-sidecar-amd64:1.14.7
-FROM docker.io/weaveworks/scope:1.9.1
+#FROM docker.io/weaveworks/scope:1.9.1
+FROM quay.io/coreos/etcd-operator:v0.9.2
