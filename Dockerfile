@@ -7,4 +7,5 @@
 #FROM quay.io/coreos/etcd-operator:v0.9.2
 #FROM gcr.io/spark-operator/spark-operator:v2.4.0-v1beta1-latest
 #FROM gcr.io/spark-operator/spark:v2.4.0
-FROM registry.access.redhat.com/openshift-istio-tech-preview/istio-operator:0.7.0
+#FROM registry.access.redhat.com/openshift-istio-tech-preview/istio-operator:0.7.0
+FROM registry.access.redhat.com/openshift-istio-tech-preview/openshift-ansible:0.7.0
