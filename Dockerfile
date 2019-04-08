@@ -11,4 +11,6 @@
 #FROM registry.access.redhat.com/openshift-istio-tech-preview/openshift-ansible:0.7.0
 #FROM gcr.io/google_samples/k8szk:v1
 #FROM gcr.io/google_samples/k8szk:v3
-FROM gcr.io/google_samples/k8skafka:v1
+#FROM gcr.io/google_samples/k8skafka:v1
+FROM gcr.io/google-samples/cassandra:v14
+
