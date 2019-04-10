@@ -13,5 +13,7 @@
 #FROM gcr.io/google_samples/k8szk:v3
 #FROM gcr.io/google_samples/k8skafka:v1
 #FROM gcr.io/google-samples/cassandra:v14
-FROM gcr.io/kubernetes-e2e-test-images/pets/redis-installer:1.2
+#FROM gcr.io/kubernetes-e2e-test-images/pets/redis-installer:1.2
+FROM gcr.io/google-samples/xtrabackup:1.0
+
 
