@@ -15,6 +15,10 @@
 #FROM gcr.io/google-samples/cassandra:v14
 #FROM gcr.io/kubernetes-e2e-test-images/pets/redis-installer:1.2
 #FROM gcr.io/google-samples/xtrabackup:1.0
-FROM quay.io/coreos/etcd:v3.2.22
+#FROM quay.io/coreos/etcd:v3.2.22
+FROM vmware/nginx-photon:v1.4.0
+RUN tdnf upgrade nginx -y
+
+
 
 
