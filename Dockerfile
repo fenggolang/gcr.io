@@ -20,7 +20,8 @@
 #RUN tdnf upgrade nginx -y
 #FROM quay.io/coreos/clair-git:latest
 #FROM quay.io/coreos/clair:latest
-FROM quay.io/coreos/clair:v2.0.2
+#FROM quay.io/coreos/clair:v2.0.2
+FROM quay.io/coreos/clair:v1.2.6
 
 
 
