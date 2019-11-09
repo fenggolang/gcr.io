@@ -18,7 +18,8 @@
 #FROM quay.io/coreos/etcd:v3.2.22
 #FROM vmware/nginx-photon:v1.4.0
 #RUN tdnf upgrade nginx -y
-FROM quay.io/coreos/clair-git:latest
+#FROM quay.io/coreos/clair-git:latest
+FROM quay.io/coreos/clair:latest
 
 
 
