@@ -21,7 +21,8 @@
 #FROM quay.io/coreos/clair-git:latest
 #FROM quay.io/coreos/clair:latest
 #FROM quay.io/coreos/clair:v2.0.2
-FROM quay.io/coreos/clair:v2.0.0
+#FROM quay.io/coreos/clair:v2.0.0
+FROM registry.centos.org/dotnet/dotnet-20-centos7:latest
 
 
 
