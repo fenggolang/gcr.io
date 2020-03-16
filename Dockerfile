@@ -27,8 +27,10 @@
 
 FROM centos:7
 RUN yum install git -y
-RUN git clone https://github.com/hyperledger/cello.git
-CMD ["tail","-f","/var/log/lastlog"]
+RUN cd /opt && git clone https://github.com/hyperledger/cello.git
+RUN ls -l /opt
+RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
+CMD ["tail","-f","/var/log/messages"]
 
 
 
