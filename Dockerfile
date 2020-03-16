@@ -23,7 +23,12 @@
 #FROM quay.io/coreos/clair:v2.0.2
 #FROM quay.io/coreos/clair:v2.0.0
 #FROM registry.centos.org/dotnet/dotnet-20-centos7:latest
-FROM centos/mysql-57-centos7:5.7
+#FROM centos/mysql-57-centos7:5.7
+
+FROM centos:7
+RUN yum install git -y
+RUN git clone https://github.com/hyperledger/cello.git
+CMD ["tail","-f","/var/log/lastlog"]
 
 
 
