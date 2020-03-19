@@ -30,6 +30,8 @@
 #RUN cd /opt && git clone https://github.com/hyperledger/cello.git
 #RUN ls -l /opt
 FROM centos:7
+USER root
+RUN yum install wget -y
 RUN cd /opt && wget -c https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/crc-linux-amd64.tar.xz
 RUN ls -l /opt
 RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
