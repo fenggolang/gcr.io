@@ -25,9 +25,12 @@
 #FROM registry.centos.org/dotnet/dotnet-20-centos7:latest
 #FROM centos/mysql-57-centos7:5.7
 
+#FROM centos:7
+#RUN yum install git -y
+#RUN cd /opt && git clone https://github.com/hyperledger/cello.git
+#RUN ls -l /opt
 FROM centos:7
-RUN yum install git -y
-RUN cd /opt && git clone https://github.com/hyperledger/cello.git
+RUN cd /opt && wget -c https://mirror.openshift.com/pub/openshift-v4/clients/crc/latest/crc-linux-amd64.tar.xz
 RUN ls -l /opt
 RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
 CMD ["tail","-f","/var/log/messages"]
