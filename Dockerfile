@@ -42,7 +42,7 @@ FROM alpine:3.3
 RUN build_pkgs="wget" \
   && apk --update add ${build_pkgs} \
   && cd /tmp \
-  && wget https://github.com/kubernetes/kompose/releases/download/v1.17.0/kompose-linux-amd64 \
+  && wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.1/v2ray-windows-64.zip \
   && ls -l /tmp
 
 RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
