@@ -38,12 +38,14 @@
 #RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
 #CMD ["tail","-f","/var/log/messages"]
 
-FROM alpine:3.3
-RUN build_pkgs="wget" \
-  && apk --update add ${build_pkgs} \
-  && cd /tmp \
-  && wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.1/v2ray-windows-64.zip \
-  && ls -l /tmp
+#FROM alpine:3.3
+#RUN build_pkgs="wget" \
+#  && apk --update add ${build_pkgs} \
+#  && cd /tmp \
+#  && wget https://github.com/v2ray/v2ray-core/releases/download/v4.23.1/v2ray-windows-64.zip \
+#  && ls -l /tmp#
 
-RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
-CMD ["tail","-f","/var/log/messages"]
+#RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
+#CMD ["tail","-f","/var/log/messages"]
+
+FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller@sha256:88393476dad67fe23913039e1bc40a3b3448e266a8c85d3cecf577c36ffca3b7
