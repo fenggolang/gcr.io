@@ -48,5 +48,5 @@
 #RUN touch /var/log/messages && echo "eeeeeee" >> /var/log/messages
 #CMD ["tail","-f","/var/log/messages"]
 
-#FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller@sha256:88393476dad67fe23913039e1bc40a3b3448e266a8c85d3cecf577c36ffca3b7
-FROM gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard@sha256:7adaaa75759b04a6003a0334e2843582a160b2d95a18943a49bed3b9c047b343
+FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller@sha256:88393476dad67fe23913039e1bc40a3b3448e266a8c85d3cecf577c36ffca3b7
+#ROM gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard@sha256:7adaaa75759b04a6003a0334e2843582a160b2d95a18943a49bed3b9c047b343
