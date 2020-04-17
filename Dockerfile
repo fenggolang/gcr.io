@@ -52,7 +52,7 @@
 #FROM gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard@sha256:7adaaa75759b04a6003a0334e2843582a160b2d95a18943a49bed3b9c047b343
 #FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/creds-init@sha256:3cdf7b1abc4264470a2bffd692184aeb95600b31e2ea18b84dbb4b40cd776791
 
-FROM alpine:3.3
+FROM alpine:3.11.5
 RUN build_pkgs="wget" \
   && apk --update add ${build_pkgs} \
   && cd /tmp \
