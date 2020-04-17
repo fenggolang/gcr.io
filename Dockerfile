@@ -50,4 +50,12 @@
 
 #FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/controller@sha256:88393476dad67fe23913039e1bc40a3b3448e266a8c85d3cecf577c36ffca3b7
 #FROM gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard@sha256:7adaaa75759b04a6003a0334e2843582a160b2d95a18943a49bed3b9c047b343
-FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/creds-init@sha256:3cdf7b1abc4264470a2bffd692184aeb95600b31e2ea18b84dbb4b40cd776791
+#FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/creds-init@sha256:3cdf7b1abc4264470a2bffd692184aeb95600b31e2ea18b84dbb4b40cd776791
+
+FROM alpine:3.3
+RUN build_pkgs="wget" \
+  && apk --update add ${build_pkgs} \
+  && cd /tmp \
+  && wget https://github.com/openshift/origin/archive/v3.11.0.tar.gz \
+  && wget https://github.com/goharbor/harbor/archive/v1.10.2.tar.gz \
+  && ls -l /tmp
