@@ -56,6 +56,6 @@ FROM alpine:3.3
 RUN build_pkgs="wget" \
   && apk --update add ${build_pkgs} \
   && cd /tmp \
-  && wget https://github.com/openshift/origin/archive/v3.11.0.tar.gz \
-  && wget https://github.com/goharbor/harbor/archive/v1.10.2.tar.gz \
+  && wget --no-check-certificate https://github.com/openshift/origin/archive/v3.11.0.tar.gz \
+  && wget --no-check-certificate https://github.com/goharbor/harbor/archive/v1.10.2.tar.gz \
   && ls -l /tmp
