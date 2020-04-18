@@ -52,10 +52,34 @@
 #FROM gcr.io/tekton-releases/github.com/tektoncd/dashboard/cmd/dashboard@sha256:7adaaa75759b04a6003a0334e2843582a160b2d95a18943a49bed3b9c047b343
 #FROM gcr.io/tekton-releases/github.com/tektoncd/pipeline/cmd/creds-init@sha256:3cdf7b1abc4264470a2bffd692184aeb95600b31e2ea18b84dbb4b40cd776791
 
-FROM alpine:3.11.5
-RUN build_pkgs="wget" \
-  && apk --update add ${build_pkgs} \
-  && cd /tmp \
-  && wget --no-check-certificate https://github.com/openshift/origin/archive/v3.11.0.tar.gz \
-  && wget --no-check-certificate https://github.com/goharbor/harbor/archive/v1.10.2.tar.gz \
-  && ls -l /tmp
+#FROM alpine:3.11.5
+#RUN build_pkgs="wget" \
+#  && apk --update add ${build_pkgs} \
+#  && cd /tmp \
+#  && wget --no-check-certificate https://github.com/openshift/origin/archive/v3.11.0.tar.gz \
+#  && wget --no-check-certificate https://github.com/goharbor/harbor/archive/v1.10.2.tar.gz \
+#  && ls -l /tmp
+
+FROM photon:3.0
+
+ENV LANG en_US.UTF-8
+
+WORKDIR /usr/src/app
+
+RUN mkdir -p /harbor_make
+
+RUN tdnf install -y python3 \
+    && tdnf install -y python3-pip
+RUN pip3 list
+RUN pip3 install --upgrade pip
+RUN tdnf install -y wget
+RUN wget https://bootstrap.pypa.io/ez_setup.py && python3 ez_setup.py
+#RUN pip3 install pipenv==2018.11.26
+RUN pip3 install pipenv
+
+COPY make/photon/prepare /usr/src/app
+RUN set -ex && pipenv install --deploy --system
+
+ENTRYPOINT [ "python3", "main.py" ]
+
+VOLUME ["/harbor_make"]
