@@ -98,6 +98,8 @@ RUN yum install -y /tmp/origin-rpm/*.rpm && \
     yum clean all && \
     ARCH="$(uname -m | sed 's/x86_64/amd64/g')" && \
     curl https://storage.googleapis.com/golang/go$VERSION.linux-$ARCH.tar.gz | tar -C /usr/local -xzf - && \
+    #go env -w GOARCH="arm64"
+    export GOOS=linux && export GOARCH="arm64" && echo $GOOS && echo $GOARCH && \
     go get golang.org/x/tools/cmd/cover \
         github.com/Masterminds/glide \
         golang.org/x/tools/cmd/goimports \
