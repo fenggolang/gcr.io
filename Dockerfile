@@ -56,7 +56,7 @@ FROM alpine:3.11.5
 RUN build_pkgs="wget git" \
   && apk --update add ${build_pkgs} \
   && cd /tmp \
-  && git clone https://github.com/goharbor/harbor \
+  && git clone https://github.com/goharbor/harbor.git \
   && git clone https://github.com/openshift/origin.git \
   && git clone https://github.com/openshift/origin-web-console.git \
   && git clone https://github.com/openshift/origin-web-console-server.git \  
