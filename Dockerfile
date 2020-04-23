@@ -67,17 +67,24 @@
 #  && git clone https://github.com/goharbor/harbor \
 #  && git clone https://github.com/openshift/origin.git
 
+#FROM alpine:3.11.5
+#RUN build_pkgs="wget git" \
+#  && apk --update add ${build_pkgs} \
+#  && cd /tmp \
+#  && git clone https://github.com/openshift/origin-web-console.git \
+#  && git clone https://github.com/openshift/origin-web-console-server.git \
+#  && git clone https://github.com/openshift/image-registry.git \
+#  && git clone https://github.com/openshift/service-catalog.git \
+#  && git clone https://github.com/openshift/console.git \
+#  && git clone https://github.com/openshift/prometheus-alertmanager.git \
+#  && git clone https://github.com/openshift/oauth-proxy.git \
+#  && git clone https://github.com/openshift/prometheus.git \
+#  && git clone https://github.com/openshift/node_exporter.git \
+#  && git clone https://github.com/openshift/ansible-service-broker.git \
+#  && ls -l /tmp/
+
 FROM alpine:3.11.5
 RUN build_pkgs="wget git" \
   && apk --update add ${build_pkgs} \
   && cd /tmp \
-  && git clone https://github.com/openshift/origin-web-console.git \
-  && git clone https://github.com/openshift/image-registry.git \
-  && git clone https://github.com/openshift/service-catalog.git \
-  && git clone https://github.com/openshift/console.git \
-  && git clone https://github.com/openshift/prometheus-alertmanager.git \
-  && git clone https://github.com/openshift/oauth-proxy.git \
-  && git clone https://github.com/openshift/prometheus.git \
-  && git clone https://github.com/openshift/node_exporter.git \
-  && git clone https://github.com/openshift/ansible-service-broker.git \
-  && ls -l /tmp/
+  && git clone https://github.com/openshift/origin-web-console-server.git \
