@@ -19,7 +19,7 @@
 #  && git clone https://github.com/openshift/etcd.git \
 #  && git clone https://github.com/openshift/cluster-monitoring-operator.git \
 #  && git clone https://github.com/openshift/prometheus-operator.git \
-#  && git clone https://github.com/kubernetes/kube-state-metrics.git \
+#  && git clone https://github.com/openshift/kube-state-metrics.git \
 #  && git clone https://github.com/openshift/configmap-reload.git \
 #  && git clone https://github.com/cockpit-project/cockpit.git \
 #  && git clone https://github.com/openshift/grafana.git \
