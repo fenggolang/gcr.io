@@ -72,7 +72,7 @@ RUN build_pkgs="wget git" \
   && git clone https://github.com/openshift/kube-rbac-proxy.git \
   && git clone https://github.com/openshift/etcd.git \
   && git clone https://github.com/openshift/cluster-monitoring-operator.git \
-  && git clone https://github.com/coreos/prometheus-operator.git \
+  && git clone https://github.com/openshift/prometheus-operator.git \
   && git clone https://github.com/kubernetes/kube-state-metrics.git \
   && git clone https://github.com/openshift/configmap-reload.git \
   && git clone https://github.com/cockpit-project/cockpit.git \
