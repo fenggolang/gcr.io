@@ -10,9 +10,8 @@
 #  && git clone https://github.com/openshift/console.git \
 #  && git clone https://github.com/openshift/kubernetes-metrics-server.git \   
 #  && git clone https://github.com/openshift/image-registry.git \  
-#  && git clone https://github.com/openshift/prometheus-alertmanager.git \
-#  && git clone https://github.com/prometheus/alertmanager.git \
 #  && git clone https://github.com/openshift/oauth-proxy.git \
+#  && git clone https://github.com/openshift/prometheus-alertmanager.git \
 #  && git clone https://github.com/openshift/prometheus.git \
 #  && git clone https://github.com/openshift/node_exporter.git \  
 #  && git clone https://github.com/openshift/kube-rbac-proxy.git \
@@ -27,5 +26,9 @@
 #  && git clone https://github.com/openshift/origin-metrics.git \
 #  && git clone https://github.com/openshift/origin-aggregated-logging.git \  
   
-FROM k8s.gcr.io/debian-base-arm64:v1.0.0
-  
+# FROM k8s.gcr.io/debian-base-arm64:v1.0.0
+FROM alpine:3.11.5
+RUN build_pkgs="wget git curl" \
+  && apk --update add ${build_pkgs} \
+  && cd /tmp \
+  && curl -v -s -o es.zip https://repo1.maven.org/maven2/org/elasticsearch/distribution/zip/elasticsearch-oss/6.8.1/elasticsearch-oss-6.8.1.zip
