@@ -10,8 +10,9 @@ RUN build_pkgs="wget git" \
   && git clone https://github.com/openshift/console.git \
   && git clone https://github.com/openshift/kubernetes-metrics-server.git \   
   && git clone https://github.com/openshift/image-registry.git \  
-  && git clone https://github.com/openshift/oauth-proxy.git \
   && git clone https://github.com/openshift/prometheus-alertmanager.git \
+  && git clone https://github.com/prometheus/alertmanager.git \
+  && git clone https://github.com/openshift/oauth-proxy.git \
   && git clone https://github.com/openshift/prometheus.git \
   && git clone https://github.com/openshift/node_exporter.git \  
   && git clone https://github.com/openshift/kube-rbac-proxy.git \
@@ -24,4 +25,4 @@ RUN build_pkgs="wget git" \
   && git clone https://github.com/openshift/grafana.git \
   && git clone https://github.com/openshift/ansible-service-broker.git \  
   && git clone https://github.com/openshift/origin-metrics.git \
-  && git clone https://github.com/openshift/origin-aggregated-logging.git \  
+  && git clone https://github.com/openshift/origin-aggregated-logging.git \ 
