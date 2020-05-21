@@ -1,4 +1,4 @@
-FROM alpine:3.11.5
+#FROM alpine:3.11.5
 #RUN build_pkgs="wget git" \
 #  && apk --update add ${build_pkgs} \
 #  && cd /tmp \
