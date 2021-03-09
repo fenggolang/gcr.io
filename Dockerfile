@@ -28,8 +28,11 @@
 #  && git clone https://github.com/openshift/origin-metrics.git \
 #  && git clone https://github.com/openshift/origin-aggregated-logging.git \ 
   
-FROM alpine:3.11.5
-RUN build_pkgs="wget git curl" \
-  && apk --update add ${build_pkgs} \
-  && cd /tmp \  
-  && wget https://github.com/kubevirt/kubevirt/releases/download/v0.29.0/virtctl-v0.29.0-linux-amd64
+#FROM alpine:3.11.5
+#RUN build_pkgs="wget git curl" \
+#  && apk --update add ${build_pkgs} \
+#  && cd /tmp \  
+#  && wget https://github.com/kubevirt/kubevirt/releases/download/v0.29.0/virtctl-v0.29.0-linux-amd64
+  
+FROM gcr.io/kubebuilder/kube-rbac-proxy:v0.4.0  
+
