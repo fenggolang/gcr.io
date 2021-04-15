@@ -27,6 +27,6 @@ RUN build_pkgs="wget git" \
 #  && git clone https://github.com/openshift/ansible-service-broker.git \  
 #  && git clone https://github.com/openshift/origin-metrics.git \
 #  && git clone https://github.com/openshift/origin-aggregated-logging.git \
-  && git clone https://github.com/golang/tools.git \
+  git clone https://github.com/golang/tools.git \
 	&& git clone https://github.com/golang/mod.git \
 	&& git clone https://github.com/golang/xerrors.git
